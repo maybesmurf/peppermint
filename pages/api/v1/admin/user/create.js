@@ -1,6 +1,6 @@
 const { prisma } = require("../../../../../prisma/prisma");
 import { getSession } from "next-auth/react";
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export default async function createUser(req, res) {
   const session = await getSession({ req });

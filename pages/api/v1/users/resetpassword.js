@@ -1,6 +1,6 @@
 const { prisma } = require("../../../../prisma/prisma");
 
-import bcrypt from "bcrypt";
+import bcrypt from "bcryptjs";
 
 export default async function getAllClients(req, res) {
   const { password, id } = req.body;
