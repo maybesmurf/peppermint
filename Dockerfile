@@ -20,7 +20,7 @@ WORKDIR /app
 # server for production
 COPY --from=deps /app/node_modules ./node_modules
 COPY . .
-RUN yarn build --network-timeout 1000000
+RUN yarn build
 
 # Remove all the development dependencies since we don't
 # need them to run the actual server.
